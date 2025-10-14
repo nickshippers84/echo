@@ -308,6 +308,8 @@ function setupBackgroundSelector() {
                 readingNook.classList.add('bg-stage-curtains-bed2');
             } else if (bgType === 'stars') {
                 readingNook.classList.add('bg-stars');
+            } else if (bgType === 'car-nook') {
+                readingNook.classList.add('bg-car-nook');
             }
         });
     });

@@ -1469,6 +1469,10 @@ body {
     background-image: url('img/stars.png') !important;
 }
 
+.background-selector .bg-preview-car {
+    background-image: url('img/car-nook.png') !important;
+}
+
 /* Reading Nook Background Classes */
 .reading-nook-section.bg-stage-curtains-bed2 {
     background: url('img/stage-curtains-bed2.png');
@@ -1479,6 +1483,13 @@ body {
 
 .reading-nook-section.bg-stars {
     background: url('img/stars.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.reading-nook-section.bg-car-nook {
+    background: url('img/car-nook.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
