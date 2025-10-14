@@ -1484,6 +1484,16 @@ body {
     background-repeat: no-repeat;
 }
 
+/* Badge Grid Divider */
+.badge-grid::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #e9ecef, transparent);
+    margin-top: 20px;
+}
+
 /* Storilly Logo Button */
 .storilly-logo-container {
     width: 100%;
