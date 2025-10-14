@@ -9,6 +9,9 @@ const closeLibrary = document.getElementById('close-library');
 document.addEventListener('DOMContentLoaded', function() {
     // Set up toggle functionality
     setupToggleButtons();
+    
+    // Set up background selector
+    setupBackgroundSelector();
 });
 
 // Toggle button functionality
@@ -276,3 +279,34 @@ fadeInStyle.textContent = `
     }
 `;
 document.head.appendChild(fadeInStyle);
+
+// Background selector functionality
+function setupBackgroundSelector() {
+    const bgButtons = document.querySelectorAll('.bg-button');
+    const readingNook = document.querySelector('.reading-nook-section');
+
+    bgButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            bgButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // Get the background type
+            const bgType = this.getAttribute('data-bg');
+
+            // Update the reading nook background
+            if (bgType === 'stage-curtains-bed2') {
+                readingNook.style.background = `url('img/stage-curtains-bed2.png')`;
+            } else if (bgType === 'stars') {
+                readingNook.style.background = `url('img/stars.png')`;
+            }
+
+            // Set background properties
+            readingNook.style.backgroundSize = 'cover';
+            readingNook.style.backgroundPosition = 'center';
+            readingNook.style.backgroundRepeat = 'no-repeat';
+        });
+    });
+}
