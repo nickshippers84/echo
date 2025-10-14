@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reading - Echo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Book Reading View -->
+    <div class="book-reading-view active">
+        <div class="book-container">
+            <div class="book-cover-page">
+                <div class="book-title">
+                    <h1 id="book-title">The Magic Forest</h1>
+                    <div class="book-illustration" id="book-cover-image">🌲</div>
+                </div>
+            </div>
+            
+            <div class="book-pages" id="book-pages">
+                <!-- Pages will be dynamically generated -->
+            </div>
+        </div>
+        
+        <div class="book-navigation">
+            <button class="nav-button prev-button" id="prev-page">← Previous</button>
+            <div class="page-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="page-progress-fill"></div>
+                </div>
+            </div>
+            <button class="nav-button next-button" id="next-page">Next →</button>
+        </div>
+        
+        <button class="close-book" id="close-book">✕ Close Book</button>
+        
+        <!-- Back to Home Button -->
+        <button class="back-to-home" id="back-to-home">🏠 Back to Home</button>
+    </div>
+
+    <script src="book.js"></script>
+</body>
+</html>

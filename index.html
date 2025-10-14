@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo - Zoe's Reading Nook</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main App Container -->
+    <div id="app-container" class="app-container active">
+
+        <!-- Library Panel (slides down) -->
+        <div class="library-panel" id="library-panel">
+            <div class="library-header">
+                <h2>Zoe's Library</h2>
+                <button class="close-library" id="close-library">✕</button>
+            </div>
+            <div class="library-content">
+                <div class="reading-progress">
+                    <h3>Keep going, Zoe!</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 33%"></div>
+                        </div>
+                        <span class="progress-text">2 of 6 books completed</span>
+                    </div>
+                </div>
+                <div class="book-grid">
+                    <div class="book-item magic-forest-bg" data-book="magic-forest">
+                        <h3>The Magic Forest</h3>
+                        <div class="book-progress read">Read Again</div>
+                    </div>
+                    <div class="book-item adventure-island-bg" data-book="adventure-island">
+                        <h3>Adventure Island</h3>
+                        <div class="book-progress read">Read Again</div>
+                    </div>
+                    <div class="book-item space-explorer-bg" data-book="space-explorer">
+                        <h3>Space Explorer</h3>
+                        <div class="book-progress next">Next →</div>
+                    </div>
+                    <div class="book-item dinosaur-friends-bg" data-book="dinosaur-friends">
+                        <h3>Dinosaur Friends</h3>
+                        <div class="book-progress locked">EXPLORE TO UNLOCK</div>
+                    </div>
+                    <div class="book-item ocean-adventure-bg" data-book="ocean-adventure">
+                        <h3>Ocean Adventure</h3>
+                        <div class="book-progress locked">EXPLORE TO UNLOCK</div>
+                    </div>
+                    <div class="book-item fairy-tale-bg" data-book="fairy-tale">
+                        <h3>Fairy Tale Kingdom</h3>
+                        <div class="book-progress locked">EXPLORE TO UNLOCK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Left Side - Reading Nook -->
+            <div class="reading-nook-section">
+                <h1 class="nook-title">Zoe's Reading Nook</h1>
+                
+                <!-- Toggle Button Group -->
+                <div class="center-button-container">
+                    <div class="toggle-button-group">
+                        <button class="toggle-button active" id="start-button">
+                            <span class="button-icon">📖</span>
+                            <span class="button-text">START READING</span>
+                        </button>
+                        <button class="toggle-button" id="book-tab">
+                            <span class="button-icon">☰</span>
+                            <span class="button-text">LIBRARY</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Badge Collection -->
+            <div class="badge-section">
+                <h2 class="badge-title">Badges Earned</h2>
+                <div class="badge-grid">
+                    <div class="badge-item earned badge-first-book">
+                        <div class="badge-icon">◉</div>
+                        <h4>First Book</h4>
+                        <p>Read your first story!</p>
+                    </div>
+                    <div class="badge-item earned badge-star-reader">
+                        <div class="badge-icon">◆</div>
+                        <h4>Star Reader</h4>
+                        <p>Read 5 books</p>
+                    </div>
+                    <div class="badge-item locked badge-focus-master">
+                        <div class="badge-icon">◈</div>
+                        <h4>Focus Master</h4>
+                        <p>Read for 30 minutes</p>
+                    </div>
+                    <div class="badge-item locked badge-super-reader">
+                        <div class="badge-icon">◊</div>
+                        <h4>Super Reader</h4>
+                        <p>Read 10 books</p>
+                    </div>
+                    <div class="badge-item locked badge-story-creator">
+                        <div class="badge-icon">◐</div>
+                        <h4>Story Star</h4>
+                        <p>Came to the Nook 5 times</p>
+                    </div>
+                    <div class="badge-item locked badge-reading-royalty">
+                        <div class="badge-icon">◑</div>
+                        <h4>Reading Royal</h4>
+                        <p>Read 20 books</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
