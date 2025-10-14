@@ -622,6 +622,17 @@ body {
     letter-spacing: 0.5px;
 }
 
+.settings-subtitle {
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 30px 0 15px 0;
+    padding: 10px 0;
+    letter-spacing: 0.3px;
+}
+
 .badge-grid {
     display: grid;
     grid-template-columns: 1fr;
