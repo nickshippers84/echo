@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set up background selector
     setupBackgroundSelector();
+    
+    // Set up Storilly logo button
+    setupStorillyButton();
 });
 
 // Toggle button functionality
@@ -305,4 +308,15 @@ function setupBackgroundSelector() {
             }
         });
     });
+}
+
+// Storilly logo button functionality
+function setupStorillyButton() {
+    const storillyButton = document.querySelector('.storilly-logo-button');
+    
+    if (storillyButton) {
+        storillyButton.addEventListener('click', function() {
+            window.location.href = 'settings.html';
+        });
+    }
 }
