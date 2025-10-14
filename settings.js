@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const saveButton = document.getElementById('save-settings');
     const resetButton = document.getElementById('reset-settings');
     const childNameInput = document.getElementById('child-name');
-    const readingLevelSelect = document.getElementById('reading-level');
-    const readingTimeInput = document.getElementById('reading-time');
-    const themeSelect = document.getElementById('theme');
 
     // Load saved settings
     loadSettings();
@@ -35,19 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (savedSettings) {
             const settings = JSON.parse(savedSettings);
             childNameInput.value = settings.childName || 'Zoe';
-            readingLevelSelect.value = settings.readingLevel || 'intermediate';
-            readingTimeInput.value = settings.readingTime || 15;
-            themeSelect.value = settings.theme || 'light';
         }
     }
 
     // Save settings to localStorage
     function saveSettings() {
         const settings = {
-            childName: childNameInput.value,
-            readingLevel: readingLevelSelect.value,
-            readingTime: parseInt(readingTimeInput.value),
-            theme: themeSelect.value
+            childName: childNameInput.value
         };
         localStorage.setItem('echoSettings', JSON.stringify(settings));
     }
@@ -55,9 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Reset settings to defaults
     function resetToDefaults() {
         childNameInput.value = 'Zoe';
-        readingLevelSelect.value = 'intermediate';
-        readingTimeInput.value = 15;
-        themeSelect.value = 'light';
         saveSettings();
     }
 
