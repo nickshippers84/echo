@@ -296,17 +296,13 @@ function setupBackgroundSelector() {
             // Get the background type
             const bgType = this.getAttribute('data-bg');
 
-            // Update the reading nook background
+            // Update the reading nook background by changing CSS class
+            readingNook.className = 'reading-nook-section';
             if (bgType === 'stage-curtains-bed2') {
-                readingNook.style.background = `url('img/stage-curtains-bed2.png')`;
+                readingNook.classList.add('bg-stage-curtains-bed2');
             } else if (bgType === 'stars') {
-                readingNook.style.background = `url('img/stars.png')`;
+                readingNook.classList.add('bg-stars');
             }
-
-            // Set background properties
-            readingNook.style.backgroundSize = 'cover';
-            readingNook.style.backgroundPosition = 'center';
-            readingNook.style.backgroundRepeat = 'no-repeat';
         });
     });
 }
