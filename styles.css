@@ -1462,11 +1462,11 @@ body {
 }
 
 .background-selector .bg-preview-bed {
-    background-image: url('./img/stage-curtains-bed2.png') !important;
+    background-image: url('img/stage-curtains-bed2.png') !important;
 }
 
 .background-selector .bg-preview-stars {
-    background-image: url('./img/stars.png') !important;
+    background-image: url('img/stars.png') !important;
 }
 
 /* Reading Nook Background Classes */
