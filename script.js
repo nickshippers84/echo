@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set up Storilly logo button
     setupStorillyButton();
+    
+    // Load and apply child's name
+    loadChildName();
 });
 
 // Toggle button functionality
@@ -318,5 +321,32 @@ function setupStorillyButton() {
         storillyButton.addEventListener('click', function() {
             window.location.href = 'settings.html';
         });
+    }
+}
+
+// Load and apply child's name from settings
+function loadChildName() {
+    const savedSettings = localStorage.getItem('echoSettings');
+    if (savedSettings) {
+        const settings = JSON.parse(savedSettings);
+        const childName = settings.childName || 'Zoe';
+        
+        // Update the reading nook title
+        const nookTitle = document.querySelector('.nook-title');
+        if (nookTitle) {
+            nookTitle.textContent = `${childName}'s Reading Nook`;
+        }
+        
+        // Update the library header
+        const libraryHeader = document.querySelector('.library-header h2');
+        if (libraryHeader) {
+            libraryHeader.textContent = `${childName}'s Library`;
+        }
+        
+        // Update the progress text
+        const progressText = document.querySelector('.reading-progress h3');
+        if (progressText) {
+            progressText.textContent = `Keep going, ${childName}!`;
+        }
     }
 }
