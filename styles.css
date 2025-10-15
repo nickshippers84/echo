@@ -65,6 +65,13 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.login-logo {
+    max-height: 120px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
 .welcome-subtitle {
     font-size: 1.1rem;
     color: #6c757d;
